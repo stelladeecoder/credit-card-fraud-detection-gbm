@@ -69,3 +69,43 @@ The GBM model outperformed a widely referenced Kaggle Random Forest benchmark.
 
 ## Visuals
 
+---
+
+## Project Highlights
+
+- Clean preprocessing pipeline  
+- Clear EDA visualizations  
+- ROC and Precision-Recall curve analysis  
+- Benchmark comparison and insights  
+- Complete Kaggle notebook showcasing all results  
+
+
+
+## Technologies Used
+
+- **Python**  
+- **Pandas**, **NumPy**  
+- **scikit-learn**  
+- **Matplotlib**, **Seaborn**  
+- **Kaggle Kernels / Jupyter Notebook**
+
+
+## How to Run the Project
+git clone https://github.com/stelladeecoder/credit-card-fraud-detection-gbm
+cd credit-card-fraud-detection-gbm
+
+# optional environment
+pip install -r requirements.txt
+
+jupyter notebook
+
+## Repository Structure
+credit-card-fraud-detection-gbm/
+│── notebook.ipynb
+│── README.md
+│── assets/
+│     ├── roc_curve.png
+│     ├── confusion_matrix.png
+│     └── feature_importance.png
+└── data/   (optional)
+
