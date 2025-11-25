@@ -1,48 +1,71 @@
-# Credit Card Fraud Detection using Gradient Boosting Machine (GBM)
+# Credit Card Fraud Detection using Gradient Boosting (GBM)
 
-## Overview
-This project focuses on detecting fraudulent credit card transactions using a Gradient Boosting Machine (GBM) model. The goal was to accurately identify fraud within a highly imbalanced financial dataset, demonstrating the effectiveness of ensemble methods in binary classification problems.
-
-The project covers:
-- Data acquisition and preprocessing
-- Exploratory Data Analysis (EDA)
-- Model training and evaluation
-- Benchmark comparison against a Kaggle baseline Random Forest model
-
-## Dataset
-The dataset used for this project was sourced from Kaggle's "Credit Card Fraud Detection 2023" dataset, featuring anonymized transaction information including principal components (V1-V28), transaction amount, and class labels (0 = legitimate, 1 = fraud).
-
-## Key Steps
-- Scaled the `Amount` feature and dropped the `Time` feature.
-- Split the data into an 80/20 stratified train-test split.
-- Trained a `GradientBoostingClassifier` with 100 estimators and a learning rate of 0.1.
-- Evaluated the model using precision, recall, F1-score, and ROC-AUC metrics.
-- Benchmarked model performance against an established Kaggle Random Forest notebook.
-
-## Results
-- Precision (Fraud): **1.00**
-- Recall (Fraud): **1.00**
-- F1-Score (Fraud): **1.00**
-- ROC-AUC: **0.9999**
-- Slightly outperformed the benchmark Random Forest model, achieving higher accuracy and ROC-AUC under balanced and clean dataset conditions.
-
-## Conclusion
-The GBM model demonstrated excellent performance on the balanced dataset. However, real-world fraud detection would involve additional complexities such as class imbalance, feature noise, and dynamic fraud patterns. Future work could explore SMOTE, anomaly detection, and deployment strategies for production environments.
-
-## Project Highlights
-- Full data preprocessing pipeline
-- Clear EDA visualizations
-- ROC and Precision-Recall curve analysis
-- Benchmark comparison and visual ROC-AUC comparison
-- Kaggle notebook showcasing all results and code
-
-## Technologies Used
-- Python
-- Pandas, NumPy
-- scikit-learn
-- Matplotlib, Seaborn
-- Kaggle Kernels
+This project explores how transaction patterns can be used to highlight activity that looks unusual, helping fraud teams focus their time on the transactions that matter most. The goal is to demonstrate a clear, repeatable framework for fraud detection while showcasing strong modeling performance using Gradient Boosting.
 
 ---
 
-> *This project demonstrates a strong understanding of machine learning workflows, model evaluation, and fraud detection challenges.* 🚀
+## Problem
+
+Fraud analysts review thousands of transactions, but only a small percentage actually require intervention. Without support, analysts can spend too much time on routine cases while truly suspicious activity becomes harder to prioritize.
+
+---
+
+## Approach
+
+I explored transaction behavior to understand what “typical” card activity looks like, then trained a Gradient Boosting Machine (GBM) model to highlight transactions that differ from those patterns. The focus was on building a practical scoring approach that helps analysts direct their attention where it matters.
+
+Key components of this approach include:
+
+- Data preprocessing, scaling, and feature handling  
+- Exploratory Data Analysis (EDA) on spending patterns  
+- Model training using a GBM classifier  
+- Evaluation using precision, recall, F1-score, ROC-AUC  
+- Benchmark comparison against a Kaggle Random Forest model  
+
+---
+
+## Outcome
+
+The GBM model delivered excellent performance, correctly identifying all fraudulent transactions in the test set. While the dataset used was balanced and clean, the project demonstrates how a model like this could support real fraud operations by:
+
+- Prioritizing transactions for manual review  
+- Reducing analyst workload  
+- Improving detection consistency  
+
+Future enhancements could include SMOTE, anomaly detection, and real-world deployment considerations.
+
+---
+
+## Dataset
+
+The dataset comes from Kaggle’s *Credit Card Fraud Detection 2023* collection, which includes anonymized features (`V1–V28`), transaction amount, and class labels (0 = legitimate, 1 = fraud).
+
+Because the original dataset is imbalanced, this project uses a balanced variant to focus on modeling methodology and interpretability.
+
+---
+
+## Project Steps
+
+### 1. Data Preprocessing
+- Scaled `Amount` feature  
+- Dropped `Time` feature  
+- Created an 80/20 **stratified split**
+
+### 2. Model Training
+- `GradientBoostingClassifier`  
+- 100 estimators  
+- Learning rate = 0.1  
+
+### 3. Evaluation
+- Precision (fraud): **1.00**  
+- Recall (fraud): **1.00**  
+- F1-Score: **1.00**  
+- ROC-AUC: **0.9999**
+
+### 4. Benchmark Comparison
+The GBM model outperformed a widely referenced Kaggle Random Forest benchmark.
+
+---
+
+## Visuals
+
