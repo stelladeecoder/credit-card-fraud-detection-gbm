@@ -8,7 +8,7 @@ This project explores how transaction patterns can be used to highlight activity
 
 Fraud analysts review thousands of transactions, but only a small percentage actually require intervention. Without support, analysts can spend too much time on routine cases while truly suspicious activity becomes harder to prioritize.
 
----
+
 
 ## Approach
 
@@ -22,7 +22,7 @@ Key components of this approach include:
 - Evaluation using precision, recall, F1-score, ROC-AUC  
 - Benchmark comparison against a Kaggle Random Forest model  
 
----
+
 
 ## Outcome
 
@@ -34,7 +34,7 @@ The GBM model delivered excellent performance, correctly identifying all fraudul
 
 Future enhancements could include SMOTE, anomaly detection, and real-world deployment considerations.
 
----
+
 
 ## Dataset
 
@@ -42,7 +42,7 @@ The dataset comes from Kaggle’s *Credit Card Fraud Detection 2023* collection,
 
 Because the original dataset is imbalanced, this project uses a balanced variant to focus on modeling methodology and interpretability.
 
----
+
 
 ## Project Steps
 
@@ -65,7 +65,7 @@ Because the original dataset is imbalanced, this project uses a balanced variant
 ### 4. Benchmark Comparison
 The GBM model outperformed a widely referenced Kaggle Random Forest benchmark.
 
----
+
 
 ## Visuals
 
