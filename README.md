@@ -2,7 +2,7 @@
 
 This project explores how transaction patterns can be used to highlight activity that looks unusual, helping fraud teams focus their time on the transactions that matter most. The goal is to demonstrate a clear, repeatable framework for fraud detection while showcasing strong modeling performance using Gradient Boosting.
 
----
+
 
 ## Problem
 
